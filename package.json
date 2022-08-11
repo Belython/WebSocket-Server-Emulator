@@ -32,7 +32,7 @@
   "private": true,
   "main": "public/electron.js",
   "productName": "WebSocket Server Emulator",
-  "homepage": "./",
+  "homepage": "https://belython.github.io/WebSocket-Server-Emulator/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -78,7 +78,9 @@
     "electron-dev": "concurrently \"SET BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build",
-    "electron-pack": "electron-builder -w"
+    "electron-pack": "electron-builder -w",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
